@@ -11,9 +11,13 @@ namespace UserRegistration
 
             string pattern = "^[A-Z]{1,}[A-Za-z]{2,}";
             string Epattern = "^[abc]*[@a-zA-Z].[com]*";
+            string phPattern = "^[91][0-9]{10}";
+
             string[] first = new string[num + 1];
             string[] last = new string[num + 1];
             string[] email = new string[num + 1];
+            string[] phNo = new string[num + 1];
+
 
             Console.WriteLine("Welcome to USER REgistration");
 
@@ -28,6 +32,12 @@ namespace UserRegistration
             Console.WriteLine("Enter your Email: ");
             email[num] = Console.ReadLine();
             Email(email, Epattern);
+
+            Console.WriteLine("Enter your Phone Number: ");
+            phNo[num] = Console.ReadLine();
+            PhNo(phNo, phPattern);
+
+
         }
         public static void FirstName(string[] name, string pattern)
         {
@@ -38,6 +48,11 @@ namespace UserRegistration
             IterateLoop(name, pattern);
         }
         public static void Email(string[] name, string pattern)
+        {
+            IterateLoop(name, pattern);
+        }
+
+        public static void PhNo(string[] name, string pattern)
         {
             IterateLoop(name, pattern);
         }
