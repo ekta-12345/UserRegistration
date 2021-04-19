@@ -12,7 +12,7 @@ namespace UserRegistration
             string pattern = "^[A-Z]{1,}[A-Za-z]{2,}";
             string Epattern = "^[abc]*[@a-zA-Z].[com]*";
             string phPattern = "^[91][0-9]{10}";
-            string passPattern = "^[A-Za-z0-9]{8,}";
+            string passPattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
             string[] first = new string[num + 1];
             string[] last = new string[num + 1];
