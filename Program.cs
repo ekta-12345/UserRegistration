@@ -10,7 +10,7 @@ namespace UserRegistration
         {
 
             string pattern = "^[A-Z]{1,}[A-Za-z]{2,}";
-            string Epattern = "^[abc]*[@a-zA-Z].[com]*";
+            string Epattern = @"^[a-z]+([-+*.]?[0-9a-z])*@[a-z0-9]+\.(\.?[a-z]{2,}){1,2}$"; 
             string phPattern = "^[91][0-9]{10}";
             string passPattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
